@@ -24,22 +24,24 @@ reader = load_model() #load model
 if image is not None:
 
     input_image = Image.open(image) #read image
-    st.image(input_image) #display image
+    w, h = input_image.size
+    if w>1000 and h>1000:
+        st.image(input_image) #display image
 
-    with st.spinner("🤖 AI is at Work! "):
+        with st.spinner("🤖 AI is at Work! "):
         
 
-        result = reader.readtext(np.array(input_image))
+            result = reader.readtext(np.array(input_image))
 
-        result_text = [] #empty list for results
+            result_text = [] #empty list for results
 
 
-        for text in result:
-            result_text.append(text[1])
+            for text in result:
+                result_text.append(text[1])
 
         st.write(result_text)
     #st.success("Here you go!")
-    st.balloons()
+        st.balloons()
 else:
     st.write("Upload an Image")
 
