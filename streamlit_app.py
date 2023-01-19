@@ -25,7 +25,7 @@ if image is not None:
 
     input_image = Image.open(image) #read image
     w, h = input_image.size
-    if w>1000 and h>1000:
+    if w<1000 and h<1000:
         st.image(input_image) #display image
 
         with st.spinner("🤖 AI is at Work! "):
