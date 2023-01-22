@@ -47,6 +47,8 @@ if image is not None:
         st.write(result_text)
     #st.success("Here you go!")
         st.balloons()
+    else:
+        st.write("please upload max size img 999*999 and size will less than 2 MB")
 else:
     st.write("Upload an Image")
 
