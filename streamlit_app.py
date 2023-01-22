@@ -25,13 +25,11 @@ reader = load_model() #load model
 if image is not None:
 
     input_image = Image.open(image) #read image
-    y=image.getvalue()
-    r=len(y)
-    st.write(y)
+    
     w, h = input_image.size
     q=w*h
     t=q/(1024*1024)
-    e=t/5
+    e=t*1.9
     if w<1000 and h<1000 and e<2:
         st.image(input_image) #display image
 
