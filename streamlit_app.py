@@ -5,7 +5,7 @@ import os
 import numpy as np #Image Processing 
 
 #title
-st.title("Easy OCR - Extract Text from Images")
+st.title("Extract Text from Images")
 
 
 
